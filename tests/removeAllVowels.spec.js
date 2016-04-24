@@ -7,4 +7,9 @@ describe('removeAllVowels Filter', function () {
 		$filter = $injector.get('$filter');
 	}));
 
+  it('should remove all vowels from the word', function() {
+    var str = $filter('removeAllVowels')('food');
+    expect(str).toEqual("fd")
+  })
+
 });
